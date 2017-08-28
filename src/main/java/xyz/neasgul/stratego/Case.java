@@ -20,4 +20,10 @@ public class Case extends Button {
         else
             this.getStyleClass().add("terrain-water");
     }
+
+    public int getX() { return x; }
+
+    public int getY() { return y; }
+
+    public boolean isWater() { return isWater; }
 }
