@@ -22,17 +22,19 @@ public class Terrain extends GridPane {
                 }
                 cases[x][y] = new Case(x, y, water);
 
-                //if white, add cases so ensured bottom left is 0,0
-                //if Black, add cases so ensured bottom left is 7,7
                 this.add(cases[x][y], x, y);
-                //else { this.add(cases[x][y], 7 - x, y); }
 
                 // Gets values into event handler
                 final int xVal = x;
                 final int yVal = y;
-                //runs things that happen when a xyz.neasgul.stratego.Case is clicked
-                //cases[x][y].setOnAction(e -> onSpaceClick(xVal, yVal) );
+                //runs things that happen when a Case is clicked
+                cases[x][y].setOnAction(event -> onCaseClick(xVal,yVal));
             }
         }
+    }
+
+
+    private void onCaseClick(int x, int y) {
+        System.out.println("You clicked on case : "+x+", "+y);
     }
 }
