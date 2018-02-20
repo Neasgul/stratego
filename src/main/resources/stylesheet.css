@@ -24,17 +24,3 @@
 .chess-space-active {
 	-fx-background-color: red;
 }
-
-.chat-box {
-	-fx-padding: 10px;
-	-fx-pref-width: 200px;
-	-fx-max-width: 300px;
-}
-
-.chat-area {
-	-fx-pref-height: 150px;
-}
-
-.chat-field {
-	
-}

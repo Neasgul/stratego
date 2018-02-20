@@ -4,10 +4,10 @@ import javafx.scene.image.Image;
 
 public abstract class Piece {
     protected Image image;
-    protected boolean color;
-    public Piece(boolean color) {
+    protected Color color;
+    public Piece(Color color) {
         this.color = color;
-
+        this.image = new Image(getClass().getResource("/img/Bomb.png").toExternalForm());
 
     }
 
@@ -16,6 +16,15 @@ public abstract class Piece {
         return this.image;
     }
 
+    public Color getColor() {
+        return color;
+    }
+
     //protected abstract MoveList[] getPieceMoves();
     protected abstract String getName();
+
+    public enum Color {
+        RED,
+        BLUE
+    }
 }
